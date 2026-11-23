@@ -18,14 +18,14 @@ spec:
     spec:
       containers:
         - name: generator
-          # Replace PROJECT_ID with your project ID (step 5 does it for you).
-          image: europe-west3-docker.pkg.dev/PROJECT_ID/freight/generator:v1
+          # Replace cc-kusuma with your project ID (step 5 does it for you).
+          image: europe-west3-docker.pkg.dev/cc-kusuma/freight/generator:v1
           args: ["stream"]
           env:
             - name: SINK
               value: stdout
             - name: MODE
-              value: both
+              value: "both"
             - name: RATE
               value: "1"
           resources:
